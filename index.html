@@ -174,8 +174,8 @@
                     <button class="info-button" data-info="Bolt è un'estensione innovativa che porta la potenza dei modelli di IA generativa direttamente in VS Code, funzionando offline. Questo permette agli sviluppatori di sfruttare l'IA per la generazione di codice, la spiegazione e altro ancora, mantenendo la privacy e il controllo completo sui propri dati e sul proprio ambiente di sviluppo.">Maggiori Info su Bolt</button>
                     <button class="play-button" onclick="window.open('https://marketplace.visualstudio.com/items?itemName=MatteoPagliazzi.bolt', '_blank')">Visita Bolt</button>
                 </div>
-            </div>
-        </div>
+                        </div>
+                    </div>
         <!-- Modal per bolt seconda versione -->
         <div id="bolt-modal2" class="modal">
             <div class="modal-content">
@@ -234,9 +234,9 @@
             iframe.style.border = 'none';
 
             if (version === 'v1') {
-                iframe.src = './src/game_versions/v1/index.html';
+                iframe.src = 'https://enchanting-pixie-b4c45e.netlify.app/';
             } else if (version === 'v2') {
-                iframe.src = './src/game_versions/v2/index.html';
+                iframe.src = 'https://magnificent-donut-b0b78c.netlify.app/';
             }
             gameWrapper.appendChild(iframe);
         }
@@ -249,4 +249,4 @@
         loadGame('v1');
     </script>
 </body>
-</html>
+</html> 
