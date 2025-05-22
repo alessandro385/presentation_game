@@ -211,6 +211,23 @@
 
         function loadGame(version) {
             gameWrapper.innerHTML = ''; // Pulisce il wrapper prima di caricare un nuovo gioco
+            
+            if (version === 'v3') {
+                // Per la versione mobile, apri direttamente la pagina in una nuova finestra
+                window.open('https://jolly-semolina-c687a7.netlify.app/', '_blank');
+                
+                // Mostra un messaggio nel wrapper
+                const message = document.createElement('div');
+                message.style.textAlign = 'center';
+                message.style.padding = '50px';
+                message.style.fontSize = '1.2em';
+                message.style.color = 'var(--color-accent)';
+                message.innerHTML = '🎮 La Versione Mobile è stata aperta in una nuova finestra!<br><br>Se la finestra non si è aperta, <a href="https://jolly-semolina-c687a7.netlify.app/" target="_blank" style="color: var(--color-accent); text-decoration: underline;">clicca qui</a>';
+                gameWrapper.appendChild(message);
+                return;
+            }
+            
+            // Per le altre versioni, carica normalmente in iframe
             let iframe = document.createElement('iframe');
             iframe.style.width = '100%';
             iframe.style.height = '600px';
@@ -220,8 +237,6 @@
                 iframe.src = './src/game_versions/v1/index.html';
             } else if (version === 'v2') {
                 iframe.src = './src/game_versions/v2/index.html';
-            } else if (version === 'v3') {
-                iframe.src = 'https://jolly-semolina-c687a7.netlify.app/'; // Link per la versione mobile
             }
             gameWrapper.appendChild(iframe);
         }
