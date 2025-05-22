@@ -232,6 +232,10 @@
             iframe.style.width = '100%';
             iframe.style.height = '600px';
             iframe.style.border = 'none';
+            iframe.style.overflow = 'hidden';
+            iframe.style.borderRadius = '5px';
+            iframe.setAttribute('scrolling', 'no');
+            iframe.setAttribute('seamless', 'seamless');
 
             if (version === 'v1') {
                 iframe.src = 'https://enchanting-pixie-b4c45e.netlify.app/';
