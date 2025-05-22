@@ -110,6 +110,7 @@
                 <select id="gameVersion" style="padding: 8px; border-radius: 5px; font-size: 1em;">
                     <option value="v1" selected>Versione 1 (Originale)</option>
                     <option value="v2">Versione 2 (Nuova)</option>
+                    <option value="v3">Versione Mobile (Android)</option>
                 </select>
             </div>
             <div id="gameWrapper"></div>
@@ -125,114 +126,13 @@
         <!-- Modal ChatGPT -->
         <div id="chatgpt-modal" class="modal">
             <div class="modal-content">
-                <span class="close-button" onclick="closeModals()">&times;</span>
-                <h2>ChatGPT 4.0</h2>
-                <div class="modal-text">
-                    <p>ChatGPT 4°
-                        Come Funziona:
-                        ChatGPT 4° è un modello di linguaggio basato su una rete neurale avanzata, addestrata per comprendere e generare testi complessi in modo coerente e contestuale. È in grado di interpretare richieste testuali, suggerire soluzioni, creare contenuti, fornire spiegazioni e adattarsi a diversi stili di scrittura. Può apprendere il contesto della conversazione, ricordare parti precedenti del discorso e mantenere la coerenza logica in un dialogo prolungato.
-                        
-                        Vantaggi nell'Uso:
-                        
-                        Pianificazione del Progetto: Grazie alla sua capacità di comprendere istruzioni complesse, ChatGPT 4° è stato utile nella fase iniziale di ideazione e progettazione, aiutandoti a definire le caratteristiche chiave del gioco, l'architettura del codice e la struttura delle cartelle.
-                        Brainstorming e Risoluzione Problemi: Ti ha permesso di porre domande aperte, vagliare diverse soluzioni e ricevere spunti creativi per risolvere problematiche tecniche o di gameplay.
-                        Ottimizzazione del Flusso di Lavoro: Ha supportato la definizione dei passaggi logici, suggerendo best practice e fornendo linee guida generali su come organizzare al meglio i file e le funzioni.
-                        In sintesi, ChatGPT 4° ha fornito la base concettuale e strategica su cui si è sviluppato l'intero progetto.</p>
-                    
-                    <!-- Nuovo contenitore per la chat -->
-                    <div class="chat-container">
-                        <h3>Conversazione di Sviluppo</h3>
-                        <a href="https://chatgpt.com/share/675ae4d2-1c78-8003-b06a-87370305f755" 
-                           target="_blank" 
-                           class="chat-link">
-                           Visualizza la conversazione completa
-                        </a>
-                        <!-- L'iframe verrà inserito qui dinamicamente -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal Bolt -->
-        <div id="bolt-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-button" onclick="closeModals()">&times;</span>
-                <h2>Stackblitz Bolt</h2>
-                <div class="modal-text">
-                    <p>Stackblitz Bolt
-                        Come Funziona:
-                        Stackblitz Bolt è un ambiente di sviluppo cloud-based che consente di creare, eseguire e testare progetti web in tempo reale. Pur non essendo un modello di AI tradizionale, utilizza tecnologie avanzate per configurare ambienti di sviluppo istantanei. Alcune versioni integrate di Stackblitz includono strumenti intelligenti per la gestione dei pacchetti, l'autocompletamento del codice e l'integrazione continua, rendendo più rapida la messa in opera di un progetto.
-                        
-                        Vantaggi nell'Uso:
-                        
-                        Ambiente di Sviluppo Istantaneo: Non devi configurare localmente l'intero ambiente; la piattaforma offre un setup pronto all'uso, permettendo di iniziare a lavorare immediatamente.
-                        Strutturazione e Organizzazione del Progetto: Grazie alla facilità con cui puoi impostare cartelle, file e dipendenze, Stackblitz Bolt ti ha aiutato a definire l'ossatura iniziale del progetto e a mantenere una chiara separazione logica tra codice di gioco, risorse grafiche, UI e utility.
-                        Collaborazione Semplificata: Lavorando su un ambiente online, è più semplice condividere il codice con altri collaboratori, ricevere feedback immediato o mostrare lo stato di avanzamento del lavoro.
-                        In sostanza, Stackblitz Bolt ha reso più agevole e veloce la fase iniziale di sviluppo e prototipazione, garantendo una base solida e ben organizzata.</p>
-                    
-                    <!-- Galleria immagini -->
-                    <div class="bolt-gallery">
-                        <div class="bolt-image-container">
-                            <img src="./src/assets/boltmodal1.png" 
-                                 alt="Bolt IDE Interface" 
-                                 class="bolt-screenshot"
-                                 title="Clicca per ingrandire">
-                            <p class="image-description">
-                                L'interfaccia dell'IDE Bolt mostra l'ambiente di sviluppo integrato con funzionalità AI. 
-                                Si può notare la disposizione intuitiva degli strumenti e l'integrazione seamless 
-                                dell'assistente AI nel flusso di lavoro.
-                            </p>
-                        </div>
-                        
-                        <div class="bolt-image-container">
-                            <img src="./src/assets/boltmodal2.png" 
-                                 alt="Initial Game Structure" 
-                                 class="bolt-screenshot"
-                                 title="Clicca per ingrandire">
-                            <p class="image-description">
-                                Visualizzazione del primo scheletro del gioco implementato attraverso Bolt. 
-                                Questa struttura iniziale ha posto le basi per lo sviluppo successivo, 
-                                mostrando l'organizzazione modulare del progetto.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="advantages-section">
-                        <h3>Vantaggi nell'Uso:</h3>
-                        <!-- ... resto del contenuto esistente ... -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal Cursor -->
-        <div id="cursor-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-button" onclick="closeModals()">&times;</span>
-                <h2>Cursor</h2>
-                <div class="modal-text">
-                    <p>Cursor (Editor di Codice con Integrazione AI)
-                        Come Funziona:
-                        Cursor è un ambiente di sviluppo (IDE) potenziato dall'intelligenza artificiale che aiuta gli sviluppatori a scrivere codice, correggere errori e navigare più facilmente tra file e funzioni. L'AI integrata nel tool può analizzare il codice in tempo reale, suggerire completamenti intelligenti, anticipare bug o incoerenze e offrire suggerimenti per ottimizzare la logica esistente.
-                        
-                        Vantaggi nell'Uso:
-                        
-                        Sviluppo Guidato: Puoi ottenere suggerimenti contestuali mentre scrivi, riducendo gli errori tipici della programmazione manuale.
-                        Refactoring e Migliorie: L'AI può proporre modifiche al codice per aumentarne la leggibilità, l'efficienza e le prestazioni, semplificando compiti come il refactoring.
-                        Produttività Incrementata: Con l'assistenza AI, è possibile iterare più rapidamente sull'implementazione delle funzionalità, testare nuove idee e mantenere un flusso di lavoro più snello.</p>
-                    <div class="modal-gallery">
-                        <div class="modal-image-container">
-                            <img src="./src/assets/cursor-modal.png" 
-                                 alt="Cursor IDE Interface" 
-                                 class="modal-screenshot"
-                                 title="Clicca per ingrandire">
-                            <p class="image-description">
-                                L'interfaccia di Cursor mostra l'integrazione con l'AI durante lo sviluppo.
-                                Si può notare come l'assistente AI fornisca suggerimenti contestuali
-                                e supporto in tempo reale durante la programmazione.
-                            </p>
-                        </div>
-                    </div>
+                <span class="close-button">&times;</span>
+                <img src="./src/assets/chatgpt-logo.png" alt="ChatGPT Logo" class="modal-logo">
+                <h2>ChatGPT</h2>
+                <p>Questa versione del gioco è stata creata con l'assistenza di ChatGPT. È stato chiesto di creare un semplice gioco del lancio della palla di neve, e questo è il risultato della sua interpretazione e capacità di sviluppo.</p>
+                <div class="modal-buttons">
+                    <button class="info-button" data-info="ChatGPT è un modello linguistico di grandi dimensioni sviluppato da OpenAI. È in grado di comprendere e generare testo in modo simile a un essere umano, rendendolo utile per una vasta gamma di applicazioni, inclusa la generazione di codice e la scrittura creativa.">Maggiori Info su ChatGPT</button>
+                    <button class="play-button" onclick="window.open('https://chat.openai.com', '_blank')">Visita ChatGPT</button>
                 </div>
             </div>
         </div>
@@ -240,90 +140,98 @@
         <!-- Modal Claude -->
         <div id="claude-modal" class="modal">
             <div class="modal-content">
-                <span class="close-button" onclick="closeModals()">&times;</span>
+                <span class="close-button">&times;</span>
+                <img src="./src/assets/claude-logo.png" alt="Claude Logo" class="modal-logo">
+                <h2>Claude</h2>
+                <p>Questa versione del gioco è stata sviluppata con l'aiuto di Claude. Similmente a ChatGPT, è stato chiesto di creare un gioco del lancio della palla di neve, e questa è la sua interpretazione.</p>
+                <div class="modal-buttons">
+                    <button class="info-button" data-info="Claude è un modello linguistico avanzato creato da Anthropic. È progettato per essere utile, innocuo e onesto, con un focus sulla sicurezza e sull'etica nell'IA.">Maggiori Info su Claude</button>
+                    <button class="play-button" onclick="window.open('https://claude.ai', '_blank')">Visita Claude</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Cursor-->
+        <div id="cursor-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <img src="./src/assets/cursor-logo.png" alt="Cursor Logo" class="modal-logo">
+                <h2>Cursor</h2>
+                <p>Questa versione del gioco è stata sviluppata con l'aiuto di Cursor. Cursor è un editor di codice basato su VSCode con funzionalità di intelligenza artificiale integrate. </p>
+                <div class="modal-buttons">
+                    <button class="info-button" data-info="Cursor è un editor di codice progettato per la programmazione assistita dall'IA. Integra funzionalità di chat, modifica e generazione di codice direttamente nell'ambiente di sviluppo, mirando a migliorare la produttività e l'esperienza di programmazione.">Maggiori Info su Cursor</button>
+                    <button class="play-button" onclick="window.open('https://cursor.sh', '_blank')">Visita Cursor</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal per bolt -->
+        <div id="bolt-modal1" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <img src="./src/assets/bolt-logo.png" alt="Bolt Logo" class="modal-logo">
+                <h2>Bolt</h2>
+                <p>Bolt è un 'estensione per VS Code sviluppata da @matteo pagliazzi che permette di utilizzare modelli di IA generativa localmente, senza la necessità di una connessione internet o di API key. </p>
+                <div class="modal-buttons">
+                    <button class="info-button" data-info="Bolt è un'estensione innovativa che porta la potenza dei modelli di IA generativa direttamente in VS Code, funzionando offline. Questo permette agli sviluppatori di sfruttare l'IA per la generazione di codice, la spiegazione e altro ancora, mantenendo la privacy e il controllo completo sui propri dati e sul proprio ambiente di sviluppo.">Maggiori Info su Bolt</button>
+                    <button class="play-button" onclick="window.open('https://marketplace.visualstudio.com/items?itemName=MatteoPagliazzi.bolt', '_blank')">Visita Bolt</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal per bolt seconda versione -->
+        <div id="bolt-modal2" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <img src="./src/assets/bolt-logo.png" alt="Bolt Logo" class="modal-logo">
+                <h2>Bolt</h2>
+                <p>Bolt è un 'estensione per VS Code sviluppata da @matteo pagliazzi che permette di utilizzare modelli di IA generativa localmente, senza la necessità di una connessione internet o di API key. </p>
+                <div class="modal-buttons">
+                    <button class="info-button" data-info="Bolt è un'estensione innovativa che porta la potenza dei modelli di IA generativa direttamente in VS Code, funzionando offline. Questo permette agli sviluppatori di sfruttare l'IA per la generazione di codice, la spiegazione e altro ancora, mantenendo la privacy e il controllo completo sui propri dati e sul proprio ambiente di sviluppo.">Maggiori Info su Bolt</button>
+                    <button class="play-button" onclick="window.open('https://marketplace.visualstudio.com/items?itemName=MatteoPagliazzi.bolt', '_blank')">Visita Bolt</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal per claude 3.5 -->
+        <div id="claude-3-5-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <img src="./src/assets/claude_3.5modal.png" alt="Claude 3.5 Logo" class="modal-logo">
                 <h2>Claude 3.5 Sonnet</h2>
-                <div class="modal-text">
-                    <p>Claude 3.5 Sonnet (tramite Cursor)
-                        Come Funziona:
-                        Claude è un modello di intelligenza artificiale sviluppato con un approccio simile a ChatGPT, ma con caratteristiche e algoritmi di addestramento specifici. Integrato in Cursor, Claude può fornire suggerimenti testuali, indicazioni di progettazione e persino supporto nella scrittura di documentazione, descrizioni dettagliate e parti di codice in modo coerente e chiaro.
-                        
-                        Vantaggi nell'Uso:
-                        
-                        Documentazione e Chiarezza: Claude 3.5 Sonnet può essere utilizzato per generare testi esplicativi, linee guida e commenti utili all'interno del codice. Questo rende più semplice comprendere il funzionamento delle varie parti del progetto, soprattutto in un team di sviluppo.
-                        Mantenimento di uno Stile Narrativo: Quando si tratta di creare contenuti informativi per la pagina di presentazione, Claude può suggerire testi più armoniosi, facili da leggere e coerenti con il tema natalizio o con il tono desiderato.
-                        Apprendimento Contestuale: Simile a ChatGPT, Claude è in grado di comprendere il contesto fornito, così da suggerire modi per integrare meglio il gioco nella pagina di presentazione, fornire linee guida su interfaccia e UX, e proporre migliorie allo storytelling del progetto.
-                        In breve, Claude 3.5 Sonnet si è rivelato un ottimo supporto per la fase di finitura e presentazione del progetto, aiutando a rendere la documentazione e la comunicazione interna più fluida, e l'esperienza utente del sito più accattivante.
-                        
-                        </p>
-                    <div class="modal-gallery">
-                        <div class="modal-image-container">
-                            <img src="./src/assets/claude_3.5modal.png" 
-                                 alt="Claude Interface" 
-                                 class="modal-screenshot"
-                                 title="Clicca per ingrandire">
-                            <p class="image-description">
-                                L'interfaccia di Claude 3.5 Sonnet mostra la schermata di benvenuto
-                                e le opzioni disponibili per l'interazione. Si possono notare le funzionalità
-                                avanzate come la generazione di formule Excel e l'analisi di documenti.
-                            </p>
-                        </div>
-                    </div>
+                <p>Questa versione del gioco è stata creata con l'assistenza di Claude 3.5 Sonnet. È stato chiesto di creare un semplice gioco del lancio della palla di neve, e questo è il risultato della sua interpretazione e capacità di sviluppo.</p>
+                <div class="modal-buttons">
+                    <button class="info-button" data-info="Claude 3.5 Sonnet è l'ultimo modello rilasciato da Anthropic, che offre prestazioni migliorate e maggiore velocità rispetto ai suoi predecessori. È particolarmente abile in compiti che richiedono ragionamento complesso e generazione di codice.">Maggiori Info su Claude 3.5 Sonnet</button>
+                    <button class="play-button" onclick="window.open('https://claude.ai', '_blank')">Visita Claude</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <script type="module" src="./src/js/main.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
         const gameWrapper = document.getElementById('gameWrapper');
-        const gameVersionSelector = document.getElementById('gameVersion');
-        const gameV1OriginalSrc = 'https://enchanting-pixie-b4c45e.netlify.app/'; // Preso da main.js
-        const gameV2Url = 'https://magnificent-donut-b0b78c.netlify.app/';
+        const gameVersionSelect = document.getElementById('gameVersion');
 
-        // Funzione per creare e caricare un iframe di gioco
-        function loadGameIntoIframe(src, title) {
-            gameWrapper.innerHTML = ''; // Pulisce il wrapper
-            const iframe = document.createElement('iframe');
-            iframe.src = src;
-            iframe.setAttribute('title', title);
-            iframe.style.width = '800px'; // Stile consistente con main.js
-            iframe.style.height = '800px';// Stile consistente con main.js
+        function loadGame(version) {
+            gameWrapper.innerHTML = ''; // Pulisce il wrapper prima di caricare un nuovo gioco
+            let iframe = document.createElement('iframe');
+            iframe.style.width = '100%';
+            iframe.style.height = '600px';
             iframe.style.border = 'none';
-            iframe.style.borderRadius = '5px'; // Stile consistente con main.js
-            iframe.style.overflow = 'hidden'; // Stile consistente con main.js
-            iframe.setAttribute('scrolling', 'no'); // Stile consistente con main.js
-            iframe.setAttribute('allowfullscreen', 'true');
+
+            if (version === 'v1') {
+                iframe.src = './src/game_versions/v1/index.html';
+            } else if (version === 'v2') {
+                iframe.src = './src/game_versions/v2/index.html';
+            } else if (version === 'v3') {
+                iframe.src = 'https://jolly-semolina-c687a7.netlify.app/'; // Link per la versione mobile
+            }
             gameWrapper.appendChild(iframe);
         }
 
-        function loadGameV1() {
-            loadGameIntoIframe(gameV1OriginalSrc, 'Gioco Versione 1');
-            console.log("Caricata Versione 1.");
-        }
-
-        function loadGameV2() {
-            loadGameIntoIframe(gameV2Url, 'Gioco Versione 2');
-            console.log("Caricata Versione 2.");
-        }
-
-        gameVersionSelector.addEventListener('change', (event) => {
-            if (event.target.value === 'v1') {
-                loadGameV1();
-            } else if (event.target.value === 'v2') {
-                loadGameV2();
-            }
+        gameVersionSelect.addEventListener('change', (event) => {
+            loadGame(event.target.value);
         });
 
-        // All'avvio, carica la V1 di default se è selezionata
-        // Questo codice ora sovrascrive l'initGame() di main.js se questo script è dopo
-        // oppure coesiste. Idealmente, l'initGame di main.js non dovrebbe più essere eseguito
-        // o dovrebbe essere rimosso se questo script gestisce tutto.
-        // Per ora, lo lasciamo così, ma la V1 verrà caricata da qui.
-        if (gameVersionSelector.value === 'v1') {
-            loadGameV1(); 
-        }
-    });
+        // Carica la versione di default (v1) all'avvio
+        loadGame('v1');
     </script>
 </body>
-</html> 
+</html>
