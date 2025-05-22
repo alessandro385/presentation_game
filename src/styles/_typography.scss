@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 :root {
     --font-primary: 'Mountains of Christmas', cursive;
     --font-secondary: 'Roboto', sans-serif;
@@ -76,7 +78,7 @@ a {
     }
     
     &:hover {
-        color: lighten(#FFD700, 10%);
+        color: color.adjust(#FFD700, $lightness: 10%);
         
         &::after {
             width: 100%;

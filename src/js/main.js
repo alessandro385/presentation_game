@@ -11,29 +11,14 @@ document.querySelector('.cta-button').addEventListener('click', (e) => {
     gameSection.scrollIntoView({ behavior: 'smooth' });
 });
 
-// Funzione per inizializzare il gioco
-function initGame() {
-    const gameWrapper = document.querySelector('#gameWrapper');
-    
-    // Crea l'iframe per il gioco
-    const gameIframe = document.createElement('iframe');
-    gameIframe.src = 'https://enchanting-pixie-b4c45e.netlify.app';
-    gameIframe.style.width = '800px';
-    gameIframe.style.height = '800px';
-    gameIframe.style.border = 'none';
-    gameIframe.style.borderRadius = '5px';
-    gameIframe.style.overflow = 'hidden';
-    gameIframe.scrolling = 'no';
-    
-    // Aggiungi l'iframe al wrapper
-    gameWrapper.appendChild(gameIframe);
-}
+// La funzione initGame() e la sua chiamata verranno rimosse
+// perché ora la logica di caricamento del gioco è gestita nello script inline di index.html
 
-// Inizializza il gioco quando il DOM è completamente caricato
+// Inizializza gli altri componenti quando il DOM è completamente caricato
 document.addEventListener('DOMContentLoaded', () => {
     createSnowEffect();
     initModals();
-    initGame();
+    // initGame(); // Rimossa
 });
 
 // Gestione della visibilità della pagina
