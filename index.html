@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Corsa di Babbo Natale - Presentazione</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/main.scss">
+</head>
+<body>
+    <div class="snow-container"></div>
+    
+    <header class="hero">
+        <h1>La Corsa di Babbo Natale 🎅</h1>
+        <p class="subtitle">Un'avventura natalizia in HTML5 Canvas e JavaScript</p>
+        <a href="#game-section" class="cta-button">Gioca Ora! 🎮</a>
+    </header>
+
+    <main>
+        <section class="development-process">
+            <h2>Come è Stato Sviluppato</h2>
+            <div class="ai-tools-grid">
+                <div class="ai-tool-card" onclick="openModal('chatgpt-modal')">
+                    <img src="./src/assets/chatgpt-logo.png" alt="ChatGPT Logo" class="ai-logo">
+                    <h3>ChatGPT 4.0</h3>
+                    <p>Utilizzato per l'elaborazione iniziale dei prompt e la pianificazione del progetto</p>
+                </div>
+                <div class="ai-tool-card" onclick="openModal('bolt-modal')">
+                    <img src="./src/assets/bolt-logo.png" alt="Stackblitz Bolt Logo" class="ai-logo">
+                    <h3>Stackblitz Bolt</h3>
+                    <p>Impiegato per la strutturazione iniziale del progetto e l'organizzazione delle directory</p>
+                </div>
+                <div class="ai-tool-card" onclick="openModal('cursor-claude-modal')">
+                    <img src="./src/assets/claude-logo.png" alt="Claude Logo" class="ai-logo">
+                    <h3 style="color: var(--color-accent);">Cursor + Claude 3.5 Sonnet</h3>
+                    <p>Utilizzato attraverso Cursor per le modifiche al gioco e lo sviluppo del sito di presentazione</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Caratteristiche del Gioco</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">🛷</div>
+                    <h3>Slitte Personalizzabili</h3>
+                    <p>Scegli tra tre diverse slitte magiche, ognuna con caratteristiche uniche</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎁</div>
+                    <h3>Sistema di Power-up</h3>
+                    <p>Raccogli bonus per aumentare velocità e potenza di sparo</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">❄️</div>
+                    <h3>Effetti Particellari</h3>
+                    <p>Neve dinamica e effetti visivi realizzati con Canvas</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎯</div>
+                    <h3>Sistema di Collisioni</h3>
+                    <p>Meccanica di gioco precisa con rilevamento collisioni avanzato</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="technical">
+            <h2>Dettagli Tecnici</h2>
+            <div class="tech-container">
+                <div class="tech-card">
+                    <h3>Tecnologie Utilizzate</h3>
+                    <ul>
+                        <li>HTML5 Canvas</li>
+                        <li>JavaScript ES6+</li>
+                        <li>Vite.js</li>
+                        <li>SVG per gli Assets</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h3>Pattern Architetturali</h3>
+                    <ul>
+                        <li>Game Loop Pattern</li>
+                        <li>Entity Component System</li>
+                        <li>State Management</li>
+                        <li>Object Pooling</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="santa-showcase">
+            <div class="santa-section">
+                <img src="./src/assets/santa.png" alt="Babbo Natale" class="santa-image">
+                <div class="project-features">
+                    <h2>Caratteristiche Implementate</h2>
+                    <ul>
+                        <li> Sistema di selezione slitte personalizzate</li>
+                        <li> Power-up e bonus speciali</li>
+                        <li> Design natalizio responsivo</li>
+                        <li> Architettura modulare e scalabile</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="game-section" class="game-container">
+            <h2>Gioca Ora!</h2>
+            <div class="version-selector-container" style="margin-bottom: 20px; text-align: center;">
+                <label for="gameVersion" style="margin-right: 10px; font-size: 1.1em;">Scegli la versione:</label>
+                <select id="gameVersion" style="padding: 8px; border-radius: 5px; font-size: 1em;">
+                    <option value="v1" selected>Versione 1 (Originale)</option>
+                    <option value="v2">Versione 2 (Nuova)</option>
+                    <option value="v3">Versione Mobile (Android)</option>
+                </select>
+            </div>
+            <div id="gameWrapper"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sviluppato con ❤️ e 🎄 spirito natalizio</p>
+    </footer>
+
+    <!-- Modals Container -->
+    <div id="modals-container" class="modal-container">
+        <!-- Modal ChatGPT -->
+        <div id="chatgpt-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <img src="./src/assets/chatgpt-logo.png" alt="ChatGPT Logo" class="modal-logo">
+                <h2>ChatGPT 4.0</h2>
+                <p>ChatGPT è stato utilizzato nella fase iniziale del progetto per l'elaborazione dei prompt e la pianificazione. È qui che è nata l'idea del gioco "La Corsa di Babbo Natale".</p>
+                <p><strong>Contributo principale:</strong></p>
+                <ul style="text-align: left; margin: 1rem 0; padding-left: 2rem;">
+                    <li style="margin-bottom: 0.5rem;">Brainstorming e sviluppo del concept iniziale</li>
+                    <li style="margin-bottom: 0.5rem;">Definizione delle meccaniche di gioco</li>
+                    <li style="margin-bottom: 0.5rem;">Pianificazione della struttura del progetto</li>
+                    <li style="margin-bottom: 0.5rem;">Elaborazione dei prompt per le fasi successive</li>
+                </ul>
+                <div class="modal-buttons">
+                    <button class="play-button" onclick="window.open('https://chat.openai.com', '_blank')">Visita ChatGPT</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Cursor + Claude -->
+        <div id="cursor-claude-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <img src="./src/assets/claude-logo.png" alt="Claude Logo" class="modal-logo">
+                <h2>Cursor + Claude 3.5 Sonnet</h2>
+                <p>Partendo dallo scheletro generato da Bolt, Cursor con Claude 3.5 Sonnet è stato utilizzato per tutte le modifiche, i miglioramenti e lo sviluppo di questo sito di presentazione.</p>
+                <p><strong>Contributo principale:</strong></p>
+                <ul style="text-align: left; margin: 1rem 0; padding-left: 2rem;">
+                    <li style="margin-bottom: 0.5rem;">Modifica e ottimizzazione del codice del gioco</li>
+                    <li style="margin-bottom: 0.5rem;">Sviluppo completo del sito di presentazione</li>
+                    <li style="margin-bottom: 0.5rem;">Implementazione di funzionalità avanzate</li>
+                    <li style="margin-bottom: 0.5rem;">Debug e risoluzione problemi</li>
+                    <li style="margin-bottom: 0.5rem;">Miglioramenti UI/UX e responsive design</li>
+                </ul>
+                
+                <div class="modal-gallery" style="margin: 1.5rem 0;">
+                    <div class="cursor-image-container">
+                        <img src="./src/assets/cursor-modal.png" alt="Cursor IDE Screenshot" class="modal-screenshot" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 0.5rem;">
+                        <p class="image-description" style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); font-style: italic;">Interfaccia di Cursor durante lo sviluppo con Claude 3.5 Sonnet</p>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 1rem; font-size: 0.95rem; color: rgba(255, 255, 255, 0.8);">
+                    Cursor è un editor di codice basato su VSCode che integra Claude 3.5 Sonnet, permettendo assistenza AI contestuale direttamente nell'ambiente di sviluppo.
+                </p>
+                
+                <div class="modal-buttons">
+                    <button class="play-button" onclick="window.open('https://cursor.sh', '_blank')">Visita Cursor</button>
+                    <button class="play-button" onclick="window.open('https://claude.ai', '_blank')">Visita Claude</button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Bolt -->
+        <div id="bolt-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <img src="./src/assets/bolt-logo.png" alt="Bolt Logo" class="modal-logo">
+                <h2>Stackblitz Bolt</h2>
+                <p>Dopo aver definito l'idea con ChatGPT, Stackblitz Bolt è stato utilizzato per generare lo scheletro iniziale del gioco e strutturare il progetto.</p>
+                <p><strong>Contributo principale:</strong></p>
+                <ul style="text-align: left; margin: 1rem 0; padding-left: 2rem;">
+                    <li style="margin-bottom: 0.5rem;">Generazione della struttura base del codice</li>
+                    <li style="margin-bottom: 0.5rem;">Organizzazione delle directory del progetto</li>
+                    <li style="margin-bottom: 0.5rem;">Creazione dell'ambiente di sviluppo iniziale</li>
+                    <li style="margin-bottom: 0.5rem;">Implementazione delle meccaniche di base del gioco</li>
+                </ul>
+                
+                <div class="modal-gallery" style="margin: 1.5rem 0;">
+                    <div class="bolt-image-container">
+                        <img src="./src/assets/boltmodal1.png" alt="Bolt Screenshot 1" class="modal-screenshot" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 0.5rem;">
+                        <p class="image-description" style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); font-style: italic;">Interfaccia di Stackblitz Bolt durante lo sviluppo iniziale</p>
+                    </div>
+                    <div class="bolt-image-container" style="margin-top: 1rem;">
+                        <img src="./src/assets/boltmodal2.png" alt="Bolt Screenshot 2" class="modal-screenshot" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 0.5rem;">
+                        <p class="image-description" style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); font-style: italic;">Struttura del progetto generata da Bolt</p>
+                    </div>
+                </div>
+                
+                <div class="modal-buttons">
+                    <button class="play-button" onclick="window.open('https://bolt.new', '_blank')">Visita Bolt</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/js/main.js"></script>
+    <script>
+        const gameWrapper = document.getElementById('gameWrapper');
+        const gameVersionSelect = document.getElementById('gameVersion');
+
+        function loadGame(version) {
+            gameWrapper.innerHTML = ''; // Pulisce il wrapper prima di caricare un nuovo gioco
+            
+            if (version === 'v3') {
+                // Per la versione mobile, apri direttamente la pagina in una nuova finestra
+                window.open('https://jolly-semolina-c687a7.netlify.app/', '_blank');
+                
+                // Mostra un messaggio nel wrapper
+                const message = document.createElement('div');
+                message.style.textAlign = 'center';
+                message.style.padding = '50px';
+                message.style.fontSize = '1.2em';
+                message.style.color = 'var(--color-accent)';
+                message.innerHTML = '🎮 La Versione Mobile è stata aperta in una nuova finestra!<br><br>Se la finestra non si è aperta, <a href="https://jolly-semolina-c687a7.netlify.app/" target="_blank" style="color: var(--color-accent); text-decoration: underline;">clicca qui</a>';
+                gameWrapper.appendChild(message);
+                return;
+            }
+            
+            // Per le altre versioni, carica normalmente in iframe
+            let iframe = document.createElement('iframe');
+            iframe.style.width = '100%';
+            iframe.style.height = '600px';
+            iframe.style.border = 'none';
+            iframe.style.overflow = 'hidden';
+            iframe.style.borderRadius = '5px';
+            iframe.setAttribute('scrolling', 'no');
+            iframe.setAttribute('seamless', 'seamless');
+
+            if (version === 'v1') {
+                iframe.src = 'https://enchanting-pixie-b4c45e.netlify.app/';
+            } else if (version === 'v2') {
+                iframe.src = 'https://magnificent-donut-b0b78c.netlify.app/';
+            }
+            gameWrapper.appendChild(iframe);
+        }
+
+        gameVersionSelect.addEventListener('change', (event) => {
+            loadGame(event.target.value);
+        });
+
+        // Carica la versione di default (v1) all'avvio
+        loadGame('v1');
+    </script>
+</body>
+</html> 

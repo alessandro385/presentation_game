@@ -1,0 +1,168 @@
+.technical {
+    padding: 6rem 2rem;
+    background: linear-gradient(
+        to bottom,
+        rgba(10, 31, 47, 0.6),
+        rgba(0, 0, 0, 0.8)
+    );
+    position: relative;
+    overflow: hidden;
+
+    h2 {
+        text-align: center;
+        color: var(--color-accent);
+        font-size: 3rem;
+        margin-bottom: 4rem;
+        font-family: 'Mountains of Christmas', cursive;
+        text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        position: relative;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 2px;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                var(--color-accent),
+                transparent
+            );
+        }
+    }
+}
+
+.tech-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.tech-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            var(--color-accent),
+            transparent
+        );
+        transform: scaleX(0);
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    &:hover {
+        transform: translateY(-5px);
+        border-color: rgba(255, 215, 0, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        
+        &::before {
+            transform: scaleX(1);
+        }
+    }
+
+    h3 {
+        color: var(--color-accent);
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-family: 'Mountains of Christmas', cursive;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+            
+            &::before {
+                content: '';
+                margin-right: 1rem;
+                font-size: 1.2rem;
+                opacity: 0.8;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            &:hover {
+                background: rgba(255, 215, 0, 0.05);
+                border-color: rgba(255, 215, 0, 0.1);
+                transform: translateX(5px);
+                
+                &::before {
+                    opacity: 1;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+// Effetto neve più sottile
+.technical::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px
+        );
+    background-size: 40px 40px;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .tech-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-card {
+        padding: 2rem;
+        
+        h3 {
+            font-size: 1.8rem;
+        }
+        
+        ul li {
+            padding: 0.6rem;
+            
+            &:hover {
+                transform: translateX(3px);
+            }
+        }
+    }
+} 
